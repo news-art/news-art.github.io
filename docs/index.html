@@ -12,22 +12,6 @@
     allowfullscreen
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
-  
-  <script>
-    const u = new URL(location.href);
-    const v = u.searchParams.get('v');
-    const base = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(v || '');
-    const params = new URLSearchParams({
-      enablejsapi: '1',
-      rel: '0',
-      modestbranding: '1',
-      playsinline: u.searchParams.get('playsinline') || '1',
-      autoplay: u.searchParams.get('autoplay') || '0',
-      origin: location.origin
-    });
-    if (!v) document.body.textContent = 'Missing ?v=VIDEO_ID';
-    else document.getElementById('player').src = `${base}?${params}`;
-  </script>
 </body>
     <iframe width="900" height="815"
         src="https://www.youtube.com/embed/UsI6LHWJRTk?autoplay=1&mute=1">
